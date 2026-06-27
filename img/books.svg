@@ -1,0 +1,212 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d0a5e"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="b1side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="b2side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9d174d"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <linearGradient id="b3side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="b4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="b4side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9d174d"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="b5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#a21caf"/>
+    </linearGradient>
+    <linearGradient id="b5side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#701a75"/>
+      <stop offset="100%" stop-color="#86198f"/>
+    </linearGradient>
+    <linearGradient id="open1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="50%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="openSpine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <radialGradient id="tableGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softshadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" rx="20" fill="url(#bg)"/>
+
+  <!-- Ambient particles -->
+  <g fill="#a855f7" opacity="0.3">
+    <circle cx="40"  cy="60"  r="2"/><circle cx="360" cy="80"  r="1.5"/>
+    <circle cx="30"  cy="200" r="1.5"/><circle cx="370" cy="180" r="2"/>
+    <circle cx="50"  cy="380" r="1"/><circle cx="350" cy="350" r="1.5"/>
+  </g>
+  <g fill="#ec4899" opacity="0.25">
+    <circle cx="80"  cy="40"  r="1.5"/><circle cx="320" cy="50"  r="1"/>
+    <circle cx="380" cy="280" r="1.5"/><circle cx="20"  cy="300" r="1"/>
+  </g>
+
+  <!-- Table surface glow -->
+  <ellipse cx="200" cy="400" rx="220" ry="30" fill="url(#tableGlow)"/>
+
+  <!-- ── OPEN BOOK (bottom, lying flat) ── -->
+  <g filter="url(#shadow)" transform="translate(0,5)">
+    <!-- Left page -->
+    <path d="M80,390 Q85,360 200,355 L200,415 Q140,418 80,415 Z" fill="url(#open1)"/>
+    <!-- Right page -->
+    <path d="M200,355 Q315,360 320,390 L320,415 Q260,418 200,415 Z" fill="#f0f4ff"/>
+    <!-- Spine -->
+    <rect x="196" y="354" width="8" height="62" rx="2" fill="url(#openSpine)"/>
+    <!-- Page lines left -->
+    <g stroke="rgba(147,51,234,0.2)" stroke-width="1" fill="none">
+      <line x1="100" y1="375" x2="188" y2="372"/>
+      <line x1="96"  y1="383" x2="188" y2="381"/>
+      <line x1="94"  y1="391" x2="188" y2="390"/>
+      <line x1="93"  y1="399" x2="188" y2="399"/>
+      <line x1="93"  y1="407" x2="188" y2="407"/>
+    </g>
+    <!-- Page lines right -->
+    <g stroke="rgba(99,102,241,0.2)" stroke-width="1" fill="none">
+      <line x1="212" y1="372" x2="304" y2="375"/>
+      <line x1="212" y1="381" x2="307" y2="383"/>
+      <line x1="212" y1="390" x2="308" y2="391"/>
+      <line x1="212" y1="399" x2="308" y2="399"/>
+      <line x1="212" y1="407" x2="308" y2="407"/>
+    </g>
+    <!-- Bookmark ribbon -->
+    <path d="M280,354 L280,388 L272,382 L264,388 L264,354 Z" fill="#ec4899" opacity="0.8"/>
+  </g>
+
+  <!-- ── STACKED BOOKS ── -->
+
+  <!-- Book 5 — bottom of stack (widest) -->
+  <g filter="url(#shadow)">
+    <!-- Cover top -->
+    <rect x="90" y="325" width="220" height="18" rx="3" fill="url(#b5)"/>
+    <!-- Spine left -->
+    <path d="M90,325 L75,333 L75,351 L90,343 Z" fill="url(#b5side)"/>
+    <!-- Pages right edge -->
+    <path d="M310,325 L320,330 L320,348 L310,343 Z" fill="#e2e8f0" opacity="0.6"/>
+    <!-- Title line on cover -->
+    <line x1="110" y1="332" x2="250" y2="332" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+    <text x="130" y="337" fill="rgba(255,255,255,0.55)" font-size="7.5" font-style="italic">Atomic Habits</text>
+  </g>
+
+  <!-- Book 4 -->
+  <g filter="url(#softshadow)">
+    <rect x="98" y="270" width="205" height="60" rx="3" fill="url(#b4)"/>
+    <path d="M98,270 L82,278 L82,330 L98,330 Z" fill="url(#b4side)"/>
+    <path d="M303,270 L314,275 L314,330 L303,330 Z" fill="#fce7f3" opacity="0.5"/>
+    <!-- Horizontal stripes decoration -->
+    <line x1="115" y1="285" x2="285" y2="285" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <line x1="115" y1="295" x2="285" y2="295" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="115" y="302" width="80" height="12" rx="3" fill="rgba(255,255,255,0.15)"/>
+    <text x="119" y="311" fill="rgba(255,255,255,0.7)" font-size="7.5" font-weight="600">INSPIRED</text>
+  </g>
+
+  <!-- Book 3 — slightly tilted -->
+  <g filter="url(#softshadow)" transform="rotate(-3, 200, 250)">
+    <rect x="103" y="200" width="195" height="72" rx="3" fill="url(#b3)"/>
+    <path d="M103,200 L87,208 L87,272 L103,272 Z" fill="url(#b3side)"/>
+    <path d="M298,200 L309,205 L309,272 L298,272 Z" fill="#f3e8ff" opacity="0.5"/>
+    <!-- Circle decoration -->
+    <circle cx="200" cy="235" r="22" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <circle cx="200" cy="235" r="14" fill="rgba(255,255,255,0.08)"/>
+    <text x="200" y="230" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7" font-weight="600">THINK</text>
+    <text x="200" y="241" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7" font-weight="600">AGAIN</text>
+  </g>
+
+  <!-- Book 2 — tilted other way -->
+  <g filter="url(#softshadow)" transform="rotate(2, 200, 170)">
+    <rect x="108" y="130" width="188" height="72" rx="3" fill="url(#b2)"/>
+    <path d="M108,130 L92,138 L92,202 L108,202 Z" fill="url(#b2side)"/>
+    <path d="M296,130 L307,135 L307,202 L296,202 Z" fill="#fce7f3" opacity="0.4"/>
+    <!-- Geometric decoration -->
+    <polygon points="200,148 222,172 200,172" fill="rgba(255,255,255,0.12)"/>
+    <polygon points="200,148 178,172 200,172" fill="rgba(255,255,255,0.08)"/>
+    <line x1="130" y1="180" x2="270" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="200" y="192" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="7" font-weight="600">THE LEAN PRODUCT PLAYBOOK</text>
+  </g>
+
+  <!-- Book 1 — top, slightly tilted -->
+  <g filter="url(#softshadow)" transform="rotate(-5, 200, 95)">
+    <rect x="112" y="62" width="180" height="70" rx="3" fill="url(#b1)"/>
+    <path d="M112,62 L96,70 L96,132 L112,132 Z" fill="url(#b1side)"/>
+    <path d="M292,62 L303,67 L303,132 L292,132 Z" fill="#ede9fe" opacity="0.45"/>
+    <!-- Star/burst decoration -->
+    <g stroke="rgba(255,255,255,0.3)" stroke-width="1.2" fill="none">
+      <line x1="200" y1="82" x2="200" y2="114"/>
+      <line x1="183" y1="91" x2="217" y2="105"/>
+      <line x1="183" y1="105" x2="217" y2="91"/>
+    </g>
+    <circle cx="200" cy="98" r="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+    <text x="200" y="120" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7" font-style="italic">always be reading</text>
+  </g>
+
+  <!-- ── FLOATING ELEMENTS ── -->
+  <!-- Reading glasses -->
+  <g transform="translate(295, 165) rotate(25)" fill="none" stroke="url(#b3)" stroke-width="2" opacity="0.7" filter="url(#glow)">
+    <circle cx="-12" cy="0" r="11"/>
+    <circle cx="12"  cy="0" r="11"/>
+    <line x1="-23" y1="-4" x2="-35" y2="-8"/>
+    <line x1="23"  y1="-4" x2="35"  y2="-8"/>
+    <line x1="-1"  y1="0"  x2="1"   y2="0"/>
+  </g>
+
+  <!-- Pencil -->
+  <g transform="translate(75, 200) rotate(-35)" filter="url(#glow)" opacity="0.75">
+    <rect x="-3" y="-45" width="6" height="80" rx="2" fill="#fbbf24"/>
+    <polygon points="-3,35 3,35 0,48" fill="#f59e0b"/>
+    <rect x="-3" y="-50" width="6" height="8" rx="1" fill="#fca5a5"/>
+    <rect x="-3" y="-45" width="6" height="4" fill="#d1d5db"/>
+  </g>
+
+  <!-- Small sparkles -->
+  <g fill="#ec4899" opacity="0.6" filter="url(#glow)">
+    <path d="M55,130 L57,124 L59,130 L65,132 L59,134 L57,140 L55,134 L49,132 Z"/>
+    <path d="M345,290 L347,284 L349,290 L355,292 L349,294 L347,300 L345,294 L339,292 Z" opacity="0.5"/>
+  </g>
+  <g fill="#a855f7" opacity="0.5" filter="url(#glow)">
+    <path d="M350,140 L351.5,136 L353,140 L357,141.5 L353,143 L351.5,147 L350,143 L346,141.5 Z"/>
+  </g>
+
+  <!-- Label -->
+  <text x="200" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" letter-spacing="3">BOOKS</text>
+</svg>

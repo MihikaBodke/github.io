@@ -1,0 +1,225 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#2d0a5e"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <linearGradient id="cupSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ddd6fe"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <linearGradient id="foam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="saucer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="steam1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="steam2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f9a8d4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f9a8d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bubble1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="bubble2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bubble3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <radialGradient id="tableGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softshadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="bubbleshadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" rx="20" fill="url(#bg)"/>
+
+  <!-- Ambient warm glow around cup -->
+  <ellipse cx="200" cy="310" rx="160" ry="120" fill="url(#warmGlow)"/>
+
+  <!-- Background dots pattern -->
+  <g fill="rgba(147,51,234,0.08)">
+    <circle cx="40"  cy="50"  r="18"/><circle cx="80"  cy="120" r="12"/>
+    <circle cx="360" cy="60"  r="15"/><circle cx="330" cy="140" r="10"/>
+    <circle cx="25"  cy="350" r="20"/><circle cx="375" cy="380" r="14"/>
+    <circle cx="60"  cy="450" r="10"/><circle cx="350" cy="460" r="16"/>
+  </g>
+
+  <!-- ── SPEECH BUBBLES ── -->
+
+  <!-- Bubble 1 — top left -->
+  <g filter="url(#bubbleshadow)" transform="translate(38, 48)">
+    <rect width="138" height="62" rx="16" fill="url(#bubble1)"/>
+    <path d="M30,62 L20,80 L50,62 Z" fill="#9333ea"/>
+    <text x="12" y="26" fill="white" font-size="10.5" font-weight="600">Let's grab</text>
+    <text x="12" y="42" fill="rgba(255,255,255,0.9)" font-size="10.5" font-weight="600">a coffee! ☕</text>
+  </g>
+
+  <!-- Bubble 2 — top right -->
+  <g filter="url(#bubbleshadow)" transform="translate(224, 38)">
+    <rect width="142" height="62" rx="16" fill="url(#bubble2)"/>
+    <path d="M108,62 L122,80 L92,62 Z" fill="#ec4899"/>
+    <text x="12" y="26" fill="white" font-size="10.5" font-weight="600">I'd love to</text>
+    <text x="12" y="42" fill="rgba(255,255,255,0.9)" font-size="10.5" font-weight="600">connect! 🤝</text>
+  </g>
+
+  <!-- Bubble 3 — mid left -->
+  <g filter="url(#bubbleshadow)" transform="translate(22, 148)">
+    <rect width="128" height="56" rx="14" fill="url(#bubble3)" opacity="0.92"/>
+    <path d="M24,56 L14,72 L44,56 Z" fill="#7c3aed"/>
+    <text x="11" y="24" fill="white" font-size="9.5" font-weight="600">Any advice</text>
+    <text x="11" y="39" fill="rgba(255,255,255,0.88)" font-size="9.5">for breaking</text>
+    <text x="11" y="52" fill="rgba(255,255,255,0.88)" font-size="9" display="none"/>
+  </g>
+  <g filter="url(#bubbleshadow)" transform="translate(22, 205)">
+    <rect width="110" height="34" rx="12" fill="url(#bubble1)" opacity="0.8"/>
+    <text x="11" y="21" fill="rgba(255,255,255,0.9)" font-size="9.5">into product?</text>
+  </g>
+
+  <!-- Bubble 4 — mid right -->
+  <g filter="url(#bubbleshadow)" transform="translate(248, 148)">
+    <rect width="132" height="56" rx="14" fill="url(#bubble2)" opacity="0.9"/>
+    <path d="M108,56 L122,72 L92,56 Z" fill="#db2777"/>
+    <text x="11" y="24" fill="white" font-size="9.5" font-weight="600">Start with</text>
+    <text x="11" y="39" fill="rgba(255,255,255,0.88)" font-size="9.5">user research</text>
+    <text x="11" y="52" fill="rgba(255,255,255,0.88)" font-size="9.5">always! 📊</text>
+  </g>
+
+  <!-- ── COFFEE CUP ── -->
+  <g filter="url(#softshadow)">
+
+    <!-- Saucer -->
+    <ellipse cx="200" cy="410" rx="90" ry="16" fill="url(#saucer)"/>
+    <ellipse cx="200" cy="407" rx="78" ry="10" fill="#ddd6fe" opacity="0.5"/>
+
+    <!-- Cup body -->
+    <path d="M138,300 Q133,395 155,405 Q178,412 200,412 Q222,412 245,405 Q267,395 262,300 Z"
+          fill="url(#cup)"/>
+
+    <!-- Cup gradient shading (left) -->
+    <path d="M138,300 Q133,360 140,400 Q145,408 155,405 Q140,390 140,300 Z"
+          fill="rgba(147,51,234,0.08)"/>
+
+    <!-- Cup pattern — latte art heart -->
+    <ellipse cx="200" cy="340" rx="42" ry="38" fill="url(#coffee)"/>
+    <!-- Foam ring -->
+    <ellipse cx="200" cy="340" rx="42" ry="38" fill="none" stroke="url(#foam)" stroke-width="4" opacity="0.6"/>
+    <!-- Latte art heart -->
+    <path d="M200,362 Q186,350 186,338 Q186,326 194,324 Q200,322 200,330 Q200,322 206,324 Q214,326 214,338 Q214,350 200,362 Z"
+          fill="url(#foam)" opacity="0.85"/>
+    <!-- Foam highlight -->
+    <ellipse cx="192" cy="333" rx="5" ry="3" fill="rgba(255,255,255,0.3)" transform="rotate(-20,192,333)"/>
+
+    <!-- Cup rim -->
+    <ellipse cx="200" cy="300" rx="62" ry="11" fill="#e0d7ff"/>
+    <ellipse cx="200" cy="298" rx="60" ry="9"  fill="#f5f3ff"/>
+
+    <!-- Handle -->
+    <path d="M262,330 Q295,330 295,355 Q295,380 262,378"
+          fill="none" stroke="url(#cupSide)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M262,330 Q288,330 288,355 Q288,375 262,378"
+          fill="none" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Gradient sheen on cup -->
+    <path d="M155,300 Q152,350 155,398 Q165,405 175,406 Q158,392 160,300 Z"
+          fill="rgba(255,255,255,0.12)"/>
+
+    <!-- Cup label band -->
+    <path d="M140,355 Q138,375 145,388 Q165,400 200,402 Q235,400 255,388 Q262,375 260,355 Z"
+          fill="url(#bubble1)" opacity="0.12"/>
+
+    <!-- Tiny logo on cup -->
+    <text x="200" y="388" text-anchor="middle" fill="rgba(147,51,234,0.4)" font-size="9" font-weight="700" letter-spacing="1">MB</text>
+
+  </g>
+
+  <!-- ── STEAM ── -->
+  <!-- Steam wisp 1 -->
+  <path d="M180,296 Q172,275 180,255 Q188,235 180,215 Q172,195 180,175"
+        fill="none" stroke="url(#steam1)" stroke-width="3" stroke-linecap="round"
+        opacity="0.7">
+    <animate attributeName="d"
+      values="M180,296 Q172,275 180,255 Q188,235 180,215 Q172,195 180,175;
+              M180,296 Q188,275 180,255 Q172,235 180,215 Q188,195 180,175;
+              M180,296 Q172,275 180,255 Q188,235 180,215 Q172,195 180,175"
+      dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Steam wisp 2 -->
+  <path d="M200,292 Q192,268 200,248 Q208,228 200,208 Q192,188 200,168"
+        fill="none" stroke="url(#steam2)" stroke-width="3.5" stroke-linecap="round"
+        opacity="0.65">
+    <animate attributeName="d"
+      values="M200,292 Q192,268 200,248 Q208,228 200,208 Q192,188 200,168;
+              M200,292 Q208,268 200,248 Q192,228 200,208 Q208,188 200,168;
+              M200,292 Q192,268 200,248 Q208,228 200,208 Q192,188 200,168"
+      dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.65;0.25;0.65" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Steam wisp 3 -->
+  <path d="M220,296 Q228,274 220,254 Q212,234 220,214 Q228,194 220,174"
+        fill="none" stroke="url(#steam1)" stroke-width="3" stroke-linecap="round"
+        opacity="0.6">
+    <animate attributeName="d"
+      values="M220,296 Q228,274 220,254 Q212,234 220,214 Q228,194 220,174;
+              M220,296 Q212,274 220,254 Q228,234 220,214 Q212,194 220,174;
+              M220,296 Q228,274 220,254 Q212,234 220,214 Q228,194 220,174"
+      dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ── SMALL FLOATING ICONS ── -->
+  <!-- Sparkle top left -->
+  <g fill="#ec4899" opacity="0.7" filter="url(#glow)">
+    <path d="M52,420 L54,413 L56,420 L63,422 L56,424 L54,431 L52,424 L45,422 Z"/>
+  </g>
+  <g fill="#a855f7" opacity="0.6" filter="url(#glow)">
+    <path d="M345,420 L347,414 L349,420 L355,422 L349,424 L347,430 L345,424 L339,422 Z"/>
+  </g>
+
+  <!-- Small hearts -->
+  <g fill="#ec4899" opacity="0.45">
+    <path d="M62,290 Q62,283 68,283 Q74,283 74,290 Q74,297 62,305 Q50,297 50,290 Q50,283 56,283 Q62,283 62,290 Z"/>
+  </g>
+  <g fill="#9333ea" opacity="0.4">
+    <path d="M340,260 Q340,254 345,254 Q350,254 350,260 Q350,266 340,273 Q330,266 330,260 Q330,254 335,254 Q340,254 340,260 Z"/>
+  </g>
+
+  <!-- Label -->
+  <text x="200" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" letter-spacing="3">COFFEE CHAT</text>
+</svg>

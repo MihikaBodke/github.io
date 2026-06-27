@@ -1,0 +1,362 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d0a5e"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="cord" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7f1d1d"/>
+      <stop offset="30%" stop-color="#dc2626"/>
+      <stop offset="70%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="cordHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fca5a5" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="40%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="bellShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef9c3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bellShadow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#451a03" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="loop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <radialGradient id="bellGlow" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fef9c3" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientGlow" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bellfilter">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="cordShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" rx="20" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="200" cy="290" rx="180" ry="160" fill="url(#ambientGlow)"/>
+  <ellipse cx="200" cy="280" rx="120" ry="100" fill="url(#pinkGlow)"/>
+
+  <!-- Background mandala / decorative rings -->
+  <g transform="translate(200,270)" fill="none" stroke="rgba(236,72,153,0.07)" stroke-width="1">
+    <circle r="165"/><circle r="148"/><circle r="130"/>
+  </g>
+  <g transform="translate(200,270)" fill="none" stroke="rgba(147,51,234,0.06)" stroke-width="0.8">
+    <circle r="115"/><circle r="98"/>
+  </g>
+  <!-- Subtle petal spokes -->
+  <g transform="translate(200,270)" stroke="rgba(236,72,153,0.05)" stroke-width="1" fill="none">
+    <line x1="0" y1="-165" x2="0" y2="165"/>
+    <line x1="-165" y1="0" x2="165" y2="0"/>
+    <line x1="-117" y1="-117" x2="117" y2="117"/>
+    <line x1="117" y1="-117" x2="-117" y2="117"/>
+  </g>
+
+  <!-- ── GHUNGROO CORD ── -->
+  <!-- Main cord body — thick padded band -->
+  <rect x="52" y="188" width="296" height="46" rx="23" fill="url(#cord)" filter="url(#cordShadow)"/>
+  <!-- Cord texture lines -->
+  <rect x="52" y="188" width="296" height="18" rx="20" fill="url(#cordHighlight)"/>
+  <!-- Cord woven detail -->
+  <g stroke="rgba(0,0,0,0.15)" stroke-width="1.2" fill="none">
+    <path d="M80,188 Q85,211 80,234"/><path d="M105,188 Q110,211 105,234"/>
+    <path d="M130,188 Q135,211 130,234"/><path d="M155,188 Q160,211 155,234"/>
+    <path d="M180,188 Q185,211 180,234"/><path d="M205,188 Q210,211 205,234"/>
+    <path d="M230,188 Q235,211 230,234"/><path d="M255,188 Q260,211 255,234"/>
+    <path d="M280,188 Q285,211 280,234"/><path d="M305,188 Q310,211 305,234"/>
+    <path d="M330,188 Q335,211 330,234"/>
+  </g>
+  <!-- Cord knot ends -->
+  <ellipse cx="52"  cy="211" rx="12" ry="23" fill="#991b1b"/>
+  <ellipse cx="348" cy="211" rx="12" ry="23" fill="#991b1b"/>
+  <ellipse cx="52"  cy="211" rx="7"  ry="15" fill="#dc2626" opacity="0.6"/>
+  <ellipse cx="348" cy="211" rx="7"  ry="15" fill="#dc2626" opacity="0.6"/>
+
+  <!-- Tie strings hanging from ends -->
+  <path d="M44,228 Q30,260 35,290 Q38,310 42,325" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M356,228 Q370,260 365,290 Q362,310 358,325" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M38,228 Q22,258 25,288 Q27,308 30,323" stroke="#991b1b" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M362,228 Q378,258 375,288 Q373,308 370,323" stroke="#991b1b" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- ── BELLS — ROW 1 (top row, slightly overlapping cord bottom) ── -->
+  <!-- I'll place 3 rows of bells: 9 bells per row, hanging from the cord -->
+
+  <!-- Helper macro-style: each bell = loop (top) + round body + slit -->
+
+  <!-- ROW 1 — 9 bells -->
+  <g filter="url(#shadow)">
+    <!-- Bell 1 -->
+    <g transform="translate(75,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 2 -->
+    <g transform="translate(108,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 3 -->
+    <g transform="translate(141,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 4 -->
+    <g transform="translate(174,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 5 (center) -->
+    <g transform="translate(200,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="14" ry="16" fill="url(#bell)" filter="url(#glow)"/>
+      <ellipse cx="0" cy="20" rx="14" ry="16" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="14" ry="16" fill="url(#bellShadow)"/>
+      <ellipse cx="-5" cy="12" rx="5" ry="3.5" fill="url(#bellShine)" opacity="0.9"/>
+      <line x1="-6" y1="34" x2="6" y2="34" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 6 -->
+    <g transform="translate(226,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 7 -->
+    <g transform="translate(259,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 8 -->
+    <g transform="translate(292,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Bell 9 -->
+    <g transform="translate(325,234)">
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bell)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="20" rx="13" ry="15" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="13" rx="4" ry="3" fill="url(#bellShine)" opacity="0.8"/>
+      <line x1="-5" y1="33" x2="5" y2="33" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ROW 2 — 8 bells, offset, hanging lower -->
+  <g filter="url(#shadow)">
+    <g transform="translate(91,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(124,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(157,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(183,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(217,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(243,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(276,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(309,284)">
+      <rect x="-4" y="-5" width="8" height="9" rx="2" fill="url(#loop)" opacity="0.9"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bell)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="18" rx="12" ry="14" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="12" rx="4" ry="2.5" fill="url(#bellShine)" opacity="0.75"/>
+      <line x1="-5" y1="30" x2="5" y2="30" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ROW 3 — 6 bells, centre cluster, lowest -->
+  <g filter="url(#shadow)" opacity="0.9">
+    <g transform="translate(124,330)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(157,330)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(183,334)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(217,334)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(243,330)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(276,330)">
+      <rect x="-3.5" y="-5" width="7" height="9" rx="2" fill="url(#loop)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bell)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellGlow)"/>
+      <ellipse cx="0" cy="17" rx="11" ry="13" fill="url(#bellShadow)"/>
+      <ellipse cx="-4" cy="11" rx="3.5" ry="2.5" fill="url(#bellShine)" opacity="0.7"/>
+      <line x1="-4" y1="28" x2="4" y2="28" stroke="#78350f" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ── SOUND RIPPLES radiating from bells ── -->
+  <g fill="none" stroke="#fbbf24" opacity="0.12">
+    <ellipse cx="200" cy="290" rx="100" ry="30" stroke-width="1.5"/>
+    <ellipse cx="200" cy="290" rx="130" ry="45" stroke-width="1"/>
+    <ellipse cx="200" cy="290" rx="160" ry="60" stroke-width="0.8"/>
+  </g>
+
+  <!-- ── MUSICAL NOTES floating ── -->
+  <g fill="#fbbf24" opacity="0.55" filter="url(#softglow)">
+    <!-- Note 1 left -->
+    <text x="55" y="155" font-size="28" opacity="0.7">♩</text>
+    <!-- Note 2 left high -->
+    <text x="82" y="120" font-size="20" opacity="0.5">♪</text>
+    <!-- Note 3 right -->
+    <text x="318" y="148" font-size="26" opacity="0.7">♩</text>
+    <!-- Note 4 right high -->
+    <text x="295" y="118" font-size="18" opacity="0.5">♫</text>
+    <!-- Note 5 centre top -->
+    <text x="190" y="100" font-size="22" opacity="0.45">♬</text>
+  </g>
+
+  <!-- Pink sparkles -->
+  <g fill="#ec4899" opacity="0.6" filter="url(#glow)">
+    <path d="M40,240  L42,233  L44,240  L51,242  L44,244  L42,251  L40,244  L33,242  Z"/>
+    <path d="M358,235 L360,228 L362,235 L369,237 L362,239 L360,246 L358,239 L351,237 Z"/>
+    <path d="M200,140 L202,133 L204,140 L211,142 L204,144 L202,151 L200,144 L193,142 Z" opacity="0.4"/>
+  </g>
+  <g fill="#a855f7" opacity="0.5" filter="url(#glow)">
+    <path d="M68,390  L70,384  L72,390  L78,392  L72,394  L70,400  L68,394  L62,392  Z"/>
+    <path d="M330,388 L332,382 L334,388 L340,390 L334,392 L332,398 L330,392 L324,390 Z"/>
+  </g>
+
+  <!-- ── FLOOR SHADOW ── -->
+  <ellipse cx="200" cy="430" rx="155" ry="18" fill="rgba(0,0,0,0.35)" filter="url(#shadow)"/>
+
+  <!-- Label -->
+  <text x="200" y="468" text-anchor="middle" fill="rgba(255,255,255,0.22)" font-size="10" letter-spacing="4">BHARATANATYAM</text>
+  <text x="200" y="484" text-anchor="middle" fill="rgba(251,191,36,0.35)" font-size="9" letter-spacing="3">GHUNGROO</text>
+</svg>
